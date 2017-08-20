@@ -21,30 +21,33 @@ html lang="en"
   body
     .navbar.navbar-default.navbar-static-top
         .container
-          button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand href="#"PhotoApp
-          .navbar-collapse.collapse.navbar-responsive-collapse
-            ul.nav.navbar-nav
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+            button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand href="#"PhotoApp
+            .navbar-collapse.collapse.navbar-responsive-collapse
+              ul.nav.navbar-nav.col-md-6
+                li= link_to "Link 1"
+                li= link_to "Link 2"
+                li= link_to "Link 3"
+
+              ul.nav.navbar-right.col-md-4
+                - if current_user
+
+                  li.col-md-4.logout = link_to "Logout", destroy_user_session_path, class: 'btn-xs btn-danger', method: :delete
+
+                - else
+
+                  li.col-md-4.logout = link_to "Sign In", new_user_session_path, class: 'btn-xs btn-primary'
+
 
     .container
       .row
         .col-lg-9
           = bootstrap_flash
           = yield
-        .col-lg-3
-          .well.sidebar-nav
-            h3 Sidebar
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+
 
       footer
         p &copy; Company 2017

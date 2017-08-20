@@ -1,0 +1,50 @@
+
+.no-padding {
+  padding: 0 !important;
+}
+.left-padding {
+  padding-left: 15px !important;
+}
+
+.logout {
+  padding-left: 0;
+  text-align: center;
+  float: right;
+}
+
+.user-name {
+  line-height: 50px;
+  padding: 0;
+  margin-top: -5px;
+  padding-right: 15px;
+}
+
+.nav.navbar-right {
+  margin-top: 5px;
+  text-align: right;
+
+  li {
+
+    .btn {
+      color: #fff !important;
+
+      &-danger {
+
+        &:visited {
+          color: #fff !important;
+        }
+
+        &:hover {
+          background-color: darken(#d9534f, 20%) !important;
+        }
+      }
+    }
+  }
+}
+
+
+.btn {
+  &:visited {
+    color: #fff !important;
+  }
+}
