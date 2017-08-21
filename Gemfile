@@ -22,6 +22,10 @@ gem 'dotenv'
 gem 'sendgrid-ruby'
 gem 'stripe'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

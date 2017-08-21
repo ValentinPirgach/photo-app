@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_one :payment
   accepts_nested_attributes_for :payment
+  has_many :images, dependent: :destroy
 
   def full_name
     ("#{first_name} #{last_name}").strip if first_name.present? || last_name.present?

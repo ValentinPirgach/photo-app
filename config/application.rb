@@ -1,6 +1,7 @@
 require_relative 'boot'
 require 'rails/all'
-
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
 require 'dotenv'
 
 Dotenv.load
