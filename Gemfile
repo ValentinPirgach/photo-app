@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'dotenv'
 
 gem 'sendgrid-ruby'
+gem 'stripe'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

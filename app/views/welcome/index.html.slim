@@ -1,0 +1,24 @@
+- if current_user
+  h1 Welcome to the photo app
+- else
+
+  .col-md-12
+    .row
+      .col-md-6.plan-column
+        h2 Premium Plan
+
+        .benefit Unlimited image uploads, price: 10$
+        .benefit Responsive deisgn
+        .benefit Access anywhere
+
+        = link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary'
+
+      .col-md-6.plan-column
+        h2 Amaze Plan
+
+        .benefit Unlimited image uploads, price: 20$
+        .benefit Responsive deisgn
+        .benefit Access anywhere
+        .benefit Unlimited projects
+
+        = link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary'

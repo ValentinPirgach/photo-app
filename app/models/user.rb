@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_one :payment
+  accepts_nested_attributes_for :payment
+
   def full_name
     ("#{first_name} #{last_name}").strip if first_name.present? || last_name.present?
     "Anonymous"
